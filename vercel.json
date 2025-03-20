@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/browser/favicon.ico"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/browser/assets/:path*"
+    },
+    {
+      "source": "/:path*.js",
+      "destination": "/browser/:path*.js"
+    },
+    {
+      "source": "/:path*.css",
+      "destination": "/browser/:path*.css"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/browser/index.html"
+    }
+  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/browser",
+  "framework": "angular"
+} 

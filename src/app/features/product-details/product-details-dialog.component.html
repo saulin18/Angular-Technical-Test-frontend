@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+  <div class="product-details">
+    <img [src]="data.image" [alt]="data.title" class="product-image">
+    <div class="product-info">
+      <p><strong>Description:</strong> {{data.description}}</p>
+      <p><strong>Category:</strong> {{data.category}}</p>
+      <p><strong>Status:</strong> {{data.status || 'Pending'}}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" (click)="onDelete()">Delete</button>
+  <button mat-button (click)="onClose()">Close</button>
+</mat-dialog-actions> 

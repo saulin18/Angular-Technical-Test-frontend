@@ -1,0 +1,19 @@
+.product-details {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-image {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.product-info {
+  flex: 1;
+
+  p {
+    margin: 10px 0;
+  }
+} 
